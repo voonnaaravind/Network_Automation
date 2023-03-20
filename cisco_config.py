@@ -11,12 +11,10 @@ password = getpass()
 logging.basicConfig(filename='netmiko_global.log', level=logging.DEBUG)
 logger = logging.getLogger("netmiko")
 
-validation = '/home/a_avoonna/validation/'
-
-with open('chg155077_config_file') as f:
+with open('config_file') as f:
         config_list = f.read().splitlines()
 
-with open('/home/a_avoonna/device_list/chg155077_device_list') as f:
+with open('device_file') as f:
         cisco_ios_switch_list = f.read().splitlines()
 
 for switch in cisco_ios_switch_list:
